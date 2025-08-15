@@ -1,0 +1,82 @@
+{
+  "name": "@masa-shin/run",
+  "version": "0.0.1",
+  "description": "Interactive CLI tool to search and execute npm scripts with fuzzy search",
+  "keywords": [
+    "npm",
+    "scripts",
+    "cli",
+    "interactive",
+    "fuzzy-search",
+    "developer-tools",
+    "productivity",
+    "ink",
+    "react"
+  ],
+  "homepage": "https://github.com/Masa-Shin/run#readme",
+  "bugs": {
+    "url": "https://github.com/Masa-Shin/run/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masa-Shin/run.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Masa-Shin",
+    "url": "https://github.com/Masa-Shin"
+  },
+  "bin": {
+    "run": "./dist/cli.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "tsc --noEmit && prettier --check . && npm run lint && ava",
+    "lint": "eslint 'source/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'source/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'source/**/*.{ts,tsx}'",
+    "prepublishOnly": "npm run test && npm run build",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A source",
+    "postversion": "git push && git push --tags",
+    "hello": "echo \"Hi there! Enjoy this awesome CLI tool! Feel free to contribute if you'd like 🚀\""
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "ink": "^4.1.0",
+    "ink-text-input": "^5.0.1",
+    "meow": "^11.0.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.32",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "@vdemedes/prettier-config": "^2.0.1",
+    "ava": "^5.2.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "ink-testing-library": "^4.0.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ]
+  }
+}
