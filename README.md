@@ -2,6 +2,8 @@
 
 An interactive CLI tool that allows you to search and execute npm scripts from package.json with fuzzy search functionality and keyboard navigation.
 
+<img width="1570" height="374" alt="スクリーンショット 2025-08-16 23 34 30" src="https://github.com/user-attachments/assets/aaaf963f-9fda-4bc7-af80-374ba494854e" />
+
 ## Features
 
 - **Interactive Interface**: Built with Ink (React for CLI) for a smooth experience
@@ -9,6 +11,8 @@ An interactive CLI tool that allows you to search and execute npm scripts from p
 - **Smart Hook Script Filtering**: Hides npm lifecycle hooks by default
   - Automatically hides scripts you rarely run manually (`preinstall`, `postinstall`, `prepare`, `version`, etc.)
   - Press `Tab` to toggle visibility of hook scripts
+
+<img width="1570" height="508" alt="スクリーンショット 2025-08-16 23 35 20" src="https://github.com/user-attachments/assets/2425a61a-b298-40f4-aa65-d70801924c9f" />
 
 ## Installation
 
